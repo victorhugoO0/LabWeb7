@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Laboratório Web[versao 7.0]</title>
+</h:head>
+<h:body>
+	<div align="center">
+		<h:form>
+			<h:commandButton value="Manutenção dos Dados dos alunos"
+				action="form_aluno" />
+		</h:form>
+		<h:dataTable value="#{bAluno.listagemAlunos}" var="objAluno">
+			<f:facet name="header">
+				<h:outputLabel value="Listagem de Aluno" />
+			</f:facet>
+			<f:facet name="footer">
+				<hr />
+			</f:facet>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Matricula" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.matricula}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Nome" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.nome}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Idade" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.idade}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Sexo" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.sexo}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Peso" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.peso}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Altura" />
+				</f:facet>
+				<h:outputLabel value="#{objAluno.altura}" />
+			</h:column>
+		</h:dataTable>
+	</div>
+</h:body>
+</html>

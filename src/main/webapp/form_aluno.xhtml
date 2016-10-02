@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Laboratorio web [versao 7.0]</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Matricula" />
+			<h:panelGroup>
+				<h:inputText value="#{bAluno.aluno.matricula}" />
+				<h:commandButton value="Consultar"
+					action="#{bAluno.actionSelectByMatricula}" />
+			</h:panelGroup>
+			<h:outputLabel value="Nome: " />
+			<h:inputText value="#{bAluno.aluno.nome}" />
+			<h:outputLabel value="Idade " />
+			<h:inputText value="#{bAluno.aluno.idade}" />
+			<h:outputLabel value="Sexo: " />
+			<h:inputText value="#{bAluno.aluno.sexo}" />
+			<h:outputLabel value="Peso: " />
+			<h:inputText value="#{bAluno.aluno.peso}" />
+			<h:outputLabel value="Altura " />
+			<h:inputText value="#{bAluno.aluno.altura}" />
+		</h:panelGrid>
+		<h:commandButton value="Gravar"
+					action="#{bAluno.actionUpdate}" />
+					<h:commandButton value="Gravar novo"
+					action="#{bAluno.actionInsert}" />
+					<h:commandButton value="Excluir"
+					action="#{bAluno.actionDelete}" />
+	</h:form>
+</h:body>
+
+</html>
